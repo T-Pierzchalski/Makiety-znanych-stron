@@ -32,7 +32,7 @@ header {
 			background: RGBA(0, 0, 0, 0.6);
 			z-index: 1;
 			border: 0.01em solid rgba(360, 360, 360, 0.5);
-			padding: 0.3em 0;
+			padding: 0.3em 0.5em;
 		}
 		.icon-extend {
 			cursor: pointer;
@@ -55,13 +55,27 @@ header {
 	li {
 		font-weight: 500;
 		letter-spacing: 0;
-		margin-inline: 1em;
+		padding: 0.3em 1em;
+		border-radius: 10px;
+	}
+	li:hover {
+		cursor: pointer;
+		background: RGBA(0, 0, 0, 0.3);
 	}
 	div.drop-down-plus {
 		cursor: pointer;
 		display: flex;
 		gap: 1em;
+		span:hover {
+			color: black;
+		}
+
+		.divider:hover ul {
+			display: block;
+			color: #fff;
+		}
 		span {
+			position: relative;
 			font-size: 2em;
 			font-weight: 500;
 			button {
@@ -71,22 +85,23 @@ header {
 				font-size: 1em;
 				cursor: pointer;
 			}
+			button:hover {
+				color: #000;
+			}
 			ul {
-				position: relative;
-				display: flex;
+				position: absolute;
+				right: -5%;
+				display: none;
 				flex-direction: column;
 				justify-content: space-between;
-				display: none;
 				li {
+					display: block;
 					padding: 0.3em 1em;
 					border-radius: 5px;
 				}
 				li:hover {
 					background: RGBA(0, 0, 0, 0.5);
 				}
-			}
-			button:hover ul {
-				display: block;
 			}
 		}
 	}
