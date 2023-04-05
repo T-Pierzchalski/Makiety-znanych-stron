@@ -1,2 +1,3 @@
 # Sklep_AGD
- Kopia layoutu znanego sklepu AGD
+
+Repozytorium stworzone w ramach ćwiczeń layoutów znanych sklepów

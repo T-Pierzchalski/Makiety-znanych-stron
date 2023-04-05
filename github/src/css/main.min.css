@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;900&display=swap");
+*,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  list-style-type: none;
+  font-size: 16px;
+}
+
+body {
+  background: RGBA(0, 0, 0, 0.75);
+  color: #fff;
+}
+
+header {
+  display: flex;
+  padding: 1em;
+  background: RGBA(0, 0, 0, 0.5);
+}
+header .logo {
+  width: 30px;
+  height: auto;
+  margin-right: 1em;
+}
+header .search-bar {
+  display: flex;
+  position: relative;
+}
+header .search-bar input {
+  background: RGBA(0, 0, 0, 0.6);
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: 1;
+}
+header .search-bar .icon-extend {
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  left: 90%;
+  width: 1em;
+}
+header li {
+  margin-inline: 0.25em;
+}
+header div.drop-down-plus {
+  cursor: pointer;
+}
+header div.drop-down-plus li {
+  display: none;
+}/*# sourceMappingURL=main.min.css.map */
