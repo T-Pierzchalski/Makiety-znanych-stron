@@ -4,6 +4,7 @@ html {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	border: none;
 	font-family: "Inter", sans-serif;
 	list-style-type: none;
 	font-size: 16px;
@@ -24,6 +25,10 @@ header {
 		width: 30px;
 		height: auto;
 		margin-right: 1em;
+		cursor: pointer;
+	}
+	.logo:hover {
+		filter: invert(100%);
 	}
 	.search-bar {
 		display: flex;
@@ -33,6 +38,8 @@ header {
 			z-index: 1;
 			border: 0.01em solid rgba(360, 360, 360, 0.5);
 			padding: 0.3em 0.5em;
+			min-width: 25vw;
+			color: white;
 		}
 		.icon-extend {
 			cursor: pointer;
@@ -66,35 +73,47 @@ header {
 		cursor: pointer;
 		display: flex;
 		gap: 1em;
-		span:hover {
-			color: black;
-		}
-
 		.divider:hover ul {
 			display: block;
 			color: #fff;
 		}
 		span {
+			margin: auto;
 			position: relative;
 			font-size: 2em;
 			font-weight: 500;
 			button {
+				position: relative;
+				display: flex;
+				margin-top: 0.3em;
 				border: none;
 				background: none;
 				color: #fff;
 				font-size: 1em;
 				cursor: pointer;
 			}
-			button:hover {
+			div {
+				position: absolute;
+				transform: rotate(180deg);
+				left: 100%;
+				top: 50%;
+			}
+			button:hover,
+			button:hover div {
 				color: #000;
 			}
 			ul {
+				background: RGBA(0, 0, 0, 0.5);
+				border-radius: 10px;
+				width: max-content;
+				padding: 1em 0.3em;
 				position: absolute;
-				right: -5%;
+				right: 1%;
 				display: none;
 				flex-direction: column;
 				justify-content: space-between;
 				li {
+					margin-top: 0.3em;
 					display: block;
 					padding: 0.3em 1em;
 					border-radius: 5px;
@@ -103,6 +122,71 @@ header {
 					background: RGBA(0, 0, 0, 0.5);
 				}
 			}
+		}
+	}
+	.photo {
+		position: relative;
+		min-width: 2em;
+		min-height: 2em;
+		background: #000;
+		border-radius: 100%;
+		margin-left: 2em;
+		span {
+			position: absolute;
+			top: 55%;
+			right: -1%;
+			transform: rotate(90deg);
+			font-size: 0.75em;
+			color: rgba(360, 360, 360, 0.5);
+			cursor: pointer;
+		}
+		ul {
+			border-radius: 10px;
+			border: 1px solid rgba(360, 360, 360, 0.5);
+			background: RGBA(0, 0, 0, 0.5);
+			display: none;
+			transform: rotate(-90deg);
+			padding: 1em 2em;
+			margin-top: 1em;
+			width: max-content;
+
+			:nth-child(2) {
+				border-top: 3px solid #000;
+				border-bottom: 3px solid #000;
+			}
+			:nth-child(8) {
+				border-bottom: 3px solid #000;
+			}
+			:last-child {
+				border-top: 3px solid #000;
+			}
+			li {
+				border-radius: 0;
+				padding: 0.5em 1em;
+				.status {
+					display: flex;
+					transform: rotate(-90deg);
+				}
+			}
+			li:hover {
+				background-color: RGBA(0, 0, 0, 0.3);
+				color: #fff;
+			}
+		}
+	}
+}
+@media screen and (min-width: 1200px) {
+	header {
+		justify-content: flex-start;
+		:nth-child(8) {
+			margin-left: auto;
+			margin-right: 2em;
+		}
+		.drop-down-plus {
+			margin-inline: 1em;
+		}
+		.search-bar .icon-extend {
+			left: 95%;
 		}
 	}
 }
