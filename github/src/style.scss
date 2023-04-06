@@ -21,6 +21,7 @@ header {
 	align-items: center;
 	padding: 1em;
 	background: RGBA(0, 0, 0, 0.5);
+	min-width: 100vw;
 	.logo {
 		width: 30px;
 		height: auto;
@@ -343,14 +344,44 @@ header {
 		}
 	}
 }
+@media screen and (max-width: 576px) {
+	*,
+	html {
+		font-size: 10px;
+	}
+	header {
+		min-width: 100vw;
+		padding: 0;
+		margin: 0;
+		:nth-child(8) {
+			margin-left: auto;
+		}
+		.drop-down-plus {
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			margin: 0;
+			padding: 0 0.3em;
+		}
+		.photo {
+			margin-right: 3em;
+		}
+	}
 
+	#container > aside > p {
+		width: fit-content;
+	}
+}
 @media screen and (min-width: 576px) {
-	* {
+	*,
+	html {
 		font-size: 10px;
 	}
 }
 @media screen and (min-width: 992px) {
-	* {
+	*,
+	html {
 		font-size: 12px;
 	}
 }
