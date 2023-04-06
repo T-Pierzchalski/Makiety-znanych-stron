@@ -7,8 +7,8 @@ html {
 	border: none;
 	font-family: "Inter", sans-serif;
 	list-style-type: none;
-	font-size: 16px;
 	transition: all 0.3s ease-in-out;
+	font-size: 16px;
 }
 body {
 	background: RGBA(0, 0, 0, 0.75);
@@ -175,21 +175,7 @@ header {
 		}
 	}
 }
-@media screen and (min-width: 1200px) {
-	header {
-		justify-content: flex-start;
-		:nth-child(8) {
-			margin-left: auto;
-			margin-right: 2em;
-		}
-		.drop-down-plus {
-			margin-inline: 1em;
-		}
-		.search-bar .icon-extend {
-			left: 95%;
-		}
-	}
-}
+
 #container {
 	width: 100%;
 	display: flex;
@@ -354,6 +340,42 @@ header {
 					}
 				}
 			}
+		}
+	}
+}
+
+@media screen and (min-width: 576px) {
+	* {
+		font-size: 10px;
+	}
+}
+@media screen and (min-width: 992px) {
+	* {
+		font-size: 12px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	*,
+	html {
+		font-size: 16px;
+	}
+	header {
+		justify-content: flex-start;
+		:nth-child(8) {
+			margin-left: auto;
+			margin-right: 2em;
+		}
+		.drop-down-plus {
+			margin-inline: 1em;
+		}
+		.search-bar .icon-extend {
+			left: 95%;
+		}
+	}
+	#container {
+		aside {
+			width: 20vw;
 		}
 	}
 }
