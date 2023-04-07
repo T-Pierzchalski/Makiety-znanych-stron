@@ -300,6 +300,7 @@ nav {
 			}
 		}
 		article {
+			padding-bottom: 1em;
 			header {
 				display: flex;
 				align-items: center;
@@ -312,6 +313,9 @@ nav {
 				h3 {
 					font-weight: 300;
 				}
+			}
+			header:first-child {
+				margin-top: 1em;
 			}
 			div {
 				display: flex;
@@ -389,11 +393,37 @@ nav {
 		flex-direction: column;
 		align-items: center;
 	}
+	#container {
+		aside {
+			padding: 0.3em;
+			margin: 0;
+			ul {
+				flex-wrap: wrap;
+				li {
+					margin: 0;
+				}
+				img {
+					width: 10%;
+				}
+			}
 
-	#container > aside > p {
-		width: fit-content;
+			p {
+				width: fit-content;
+			}
+		}
+		.main-board {
+			padding: 0.3em;
+			header h2 {
+				padding: 0 1em;
+			}
+			article div {
+				padding: 0;
+				padding-right: auto;
+			}
+		}
 	}
 }
+
 @media screen and (min-width: 576px) {
 	*,
 	html {
