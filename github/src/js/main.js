@@ -21,7 +21,12 @@ divider.addEventListener("click", () => {
 	});
 });
 extendMenu.addEventListener("click", () => {
-	nav.style.display = "flex";
+	if (nav.style.display === "flex") {
+		nav.style.display = "none";
+	} else {
+		nav.style.display = "flex";
+	}
+
 	nav.addEventListener("mouseleave", () => {
 		nav.style.display = "none";
 	});
