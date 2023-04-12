@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,600;0,700;0,1000;1,400;1,800;1,1000&display=swap");
+*,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  list-style-type: none;
+}
+
+body {
+  background: #fff;
+  font-family: "Mulish", sans-serif;
+}
+
+header {
+  background: rgba(50, 50, 50, 0.1);
+  width: 100%;
+  padding: 0.3em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  color: rgba(50, 50, 50, 0.8);
+  word-spacing: 3px;
+}
+header :nth-child(2) {
+  text-transform: uppercase;
+}
+
+nav {
+  margin-inline: 1em;
+}
+nav .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+nav .top li {
+  font-size: 1.3em;
+}
+nav .top :first-child {
+  display: flex;
+  font-weight: 700;
+}
+nav .top :first-child :first-child,
+nav .top :first-child :nth-child(2) {
+  margin-right: 2em;
+}
+nav .top :last-child {
+  display: flex;
+}
+nav .top :last-child :first-child {
+  margin-right: 2em;
+  margin-left: 12em;
+}
+nav .top :last-child :nth-child(2) {
+  margin-right: 2em;
+}
+nav .top h1 {
+  font-size: 2em;
+  font-weight: 600;
+}
+nav .bot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .bot ul {
+  display: flex;
+  gap: 2em;
+}
+nav .bot .search-bar {
+  display: flex;
+}
+nav .bot .search-bar button,
+nav .bot .search-bar input {
+  border: none;
+  background: rgba(50, 50, 50, 0.1);
+  padding: 0.3em;
+}
+nav .bot .search-bar button {
+  cursor: pointer;
+}
+
+.slider {
+  display: flex;
+  gap: 3em;
+  padding: 2em 2em 0 2em;
+  background: rgba(255, 100, 0, 0.6);
+}
+.slider .left {
+  display: flex;
+  margin-bottom: auto;
+  position: relative;
+}
+.slider .right {
+  display: flex;
+  flex-direction: column;
+  padding: 3em 1em;
+}
+.slider .right :first-child {
+  margin-bottom: auto;
+}
+.slider .right :first-child .line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: -moz-max-content;
+  height: max-content;
+}
+.slider .right :first-child .line div {
+  width: 30px;
+  height: auto;
+  background: #fff;
+}
+.slider .right :first-child span {
+  font-weight: 600;
+}
+.slider .right :first-child span,
+.slider .right :first-child p {
+  font-size: 2em;
+}/*# sourceMappingURL=style.min.css.map */

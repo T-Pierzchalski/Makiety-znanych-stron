@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,600;0,700;0,1000;1,400;1,800;1,1000&display=swap");
+*,
+html {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-size: 14px;
+	list-style-type: none;
+}
+
+body {
+	background: #fff;
+	font-family: "Mulish", sans-serif;
+}
+header {
+	background: rgba(50, 50, 50, 0.1);
+	width: 100%;
+	padding: 0.3em 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: capitalize;
+	color: rgba(50, 50, 50, 0.8);
+	word-spacing: 3px;
+	:nth-child(2) {
+		text-transform: uppercase;
+	}
+}
+nav {
+	margin-inline: 1em;
+	.top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1em;
+		li {
+			font-size: 1.3em;
+		}
+		:first-child {
+			display: flex;
+			:first-child,
+			:nth-child(2) {
+				margin-right: 2em;
+			}
+			font-weight: 700;
+		}
+		:last-child {
+			display: flex;
+			:first-child {
+				margin-right: 2em;
+				margin-left: 12em;
+			}
+			:nth-child(2) {
+				margin-right: 2em;
+			}
+		}
+		h1 {
+			font-size: 2em;
+			font-weight: 600;
+		}
+	}
+	.bot {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		ul {
+			display: flex;
+			gap: 2em;
+		}
+		.search-bar {
+			display: flex;
+			button,
+			input {
+				border: none;
+				background: rgba(50, 50, 50, 0.1);
+				padding: 0.3em;
+			}
+			button {
+				cursor: pointer;
+			}
+		}
+	}
+}
+.slider {
+	display: flex;
+	gap: 3em;
+	padding: 2em 2em 0 2em;
+	background: rgba(255, 100, 0, 0.6);
+	.left {
+		display: flex;
+		margin-bottom: auto;
+		position: relative;
+	}
+	.right {
+		display: flex;
+		flex-direction: column;
+		padding: 3em 1em;
+		:first-child {
+			margin-bottom: auto;
+			.line {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				height: max-content;
+				div {
+					width: 30px;
+					height: auto;
+					background: #fff;
+				}
+			}
+			span {
+				font-weight: 600;
+			}
+			span,
+			p {
+				font-size: 2em;
+			}
+		}
+	}
+}
