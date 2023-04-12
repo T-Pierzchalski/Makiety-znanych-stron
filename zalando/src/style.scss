@@ -12,6 +12,13 @@ body {
 	background: #fff;
 	font-family: "Mulish", sans-serif;
 }
+button {
+	cursor: pointer;
+}
+h2 {
+	font-weight: 1000;
+	font-size: 2em;
+}
 header {
 	background: rgba(50, 50, 50, 0.1);
 	width: 100%;
@@ -54,9 +61,12 @@ nav {
 				margin-right: 2em;
 			}
 		}
-		h1 {
-			font-size: 2em;
-			font-weight: 600;
+		.logo {
+			display: flex;
+			h1 {
+				font-size: 2em;
+				font-weight: 600;
+			}
 		}
 	}
 	.bot {
@@ -75,29 +85,48 @@ nav {
 				background: rgba(50, 50, 50, 0.1);
 				padding: 0.3em;
 			}
-			button {
-				cursor: pointer;
-			}
 		}
 	}
 }
 .slider {
 	display: flex;
-	gap: 3em;
+	justify-content: space-between;
 	padding: 2em 2em 0 2em;
 	background: rgba(255, 100, 0, 0.6);
 	.left {
+		width: 40%;
 		display: flex;
 		margin-bottom: auto;
 		position: relative;
+		img {
+			width: 100%;
+		}
+		.prev {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			box-shadow: 4px 4px rgba(50, 50, 50, 0.4);
+		}
+		.next {
+			position: absolute;
+			right: 0;
+			top: 50%;
+		}
+		button {
+			font-size: 2em;
+			padding: 0.3em;
+			box-shadow: 0 4px 4px 0 rgba(50, 50, 50, 0.4);
+		}
 	}
 	.right {
+		width: 50%;
 		display: flex;
 		flex-direction: column;
 		padding: 3em 1em;
 		:first-child {
 			margin-bottom: auto;
 			.line {
+				max-width: 50%;
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
@@ -115,6 +144,150 @@ nav {
 			p {
 				font-size: 2em;
 			}
+		}
+		button {
+			padding: 1em 0;
+			font-size: 1.3em;
+			width: 20%;
+		}
+	}
+}
+main {
+	article {
+		display: flex;
+		flex-direction: column;
+		header {
+			padding: 2em;
+			h2 {
+				color: #000;
+			}
+		}
+		section {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding: 1em 5em;
+			ul {
+				li {
+					font-weight: 600;
+					font-size: 1.3em;
+					cursor: pointer;
+					padding-top: 0.5em;
+					padding-inline: 0.3em;
+					text-transform: capitalize;
+				}
+				:hover {
+					color: rgba(50, 50, 50, 0.4);
+				}
+			}
+		}
+	}
+}
+.newsletter {
+	display: flex;
+	justify-content: space-between;
+	padding: 2em 2em 0 1.5em;
+	background: rgba(50, 50, 50, 0.1);
+	.left {
+		width: 40%;
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		h3 {
+			font-size: 2em;
+		}
+		span {
+			font-size: 1.5em;
+			font-weight: 600;
+		}
+		p {
+			font-size: 1.2em;
+			font-weight: light;
+		}
+	}
+	.right {
+		background: #fff;
+		padding: 2em 3em;
+		width: 60%;
+		form {
+			label {
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 1em;
+				> span {
+					border: 1px solid rgba(50, 50, 50, 0.8);
+					border-bottom: none;
+					width: max-content;
+					padding: 0.2em 1em;
+				}
+				input {
+					font-size: 1.4em;
+					padding: 0.3em 0.75em;
+				}
+				input:focus,
+				input:hover {
+					border: 3px solid #000;
+				}
+			}
+			:nth-child(2) {
+				flex-direction: row;
+				div {
+					span {
+						display: flex;
+						flex-direction: row;
+					}
+					span:first-child {
+						font-weight: bold;
+						padding: 0;
+					}
+				}
+				div:last-child {
+					margin-left: 3em;
+					span {
+						font-weight: 300;
+					}
+				}
+			}
+			button {
+				width: 100%;
+				border: none;
+				padding: 1em;
+				margin-bottom: 1em;
+				font-size: 1.5em;
+			}
+			button.select {
+				position: relative;
+				width: 100%;
+				border-top: 1px solid rgba(50, 50, 50, 0.8);
+				border-bottom: 1px solid rgba(50, 50, 50, 0.8);
+				padding: 1em;
+			}
+			.select::before {
+				content: "\25BE";
+				position: absolute;
+				right: 5%;
+				bottom: -10%;
+				font-size: 3em;
+			}
+			.submit {
+				background: #000;
+				color: #fff;
+			}
+			.submit:hover {
+				background: rgba(50, 50, 50);
+			}
+		}
+	}
+}
+footer {
+	header {
+		display: block;
+		background: rgb(58, 20, 139);
+		padding: 2em 5em;
+		color: #fff;
+		h2 {
+			margin-bottom: 1em;
+			font-weight: 700;
 		}
 	}
 }
